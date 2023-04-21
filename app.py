@@ -3,11 +3,11 @@ import os
 
 import aws_cdk as cdk
 
-from 05_cognito.05_cognito_stack import 05CognitoStack
+from stack.user_pool import CognitoStack
 
 
 app = cdk.App()
-05CognitoStack(app, "05CognitoStack",
+CognitoStack(app, "UserPool",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
